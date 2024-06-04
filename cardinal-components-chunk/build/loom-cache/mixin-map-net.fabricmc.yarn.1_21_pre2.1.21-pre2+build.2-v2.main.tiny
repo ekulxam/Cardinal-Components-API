@@ -1,0 +1,3 @@
+v1	named	intermediary
+FIELD	org/ladysnake/cca/mixin/chunk/common/MixinWrapperProtoChunk	Lnet/minecraft/world/chunk/WorldChunk;	wrapped	field_12866
+METHOD	org/ladysnake/cca/mixin/chunk/common/MixinWorldChunk	()Lnet/minecraft/world/World;	getWorld	method_12200
