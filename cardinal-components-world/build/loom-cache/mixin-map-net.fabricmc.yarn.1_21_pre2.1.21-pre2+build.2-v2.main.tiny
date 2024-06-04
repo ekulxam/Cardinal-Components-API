@@ -1,3 +1,0 @@
-v1	named	intermediary
-METHOD	org/ladysnake/cca/mixin/world/common/MixinServerWorld	()Lnet/minecraft/world/PersistentStateManager;	getPersistentStateManager	method_17983
-METHOD	org/ladysnake/cca/mixin/world/common/MixinServerWorld	()Ljava/util/List;	getPlayers	method_18456
