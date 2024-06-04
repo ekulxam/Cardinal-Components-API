@@ -25,6 +25,7 @@ package org.ladysnake.cca.internal.chunk;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.network.packet.CustomPayload;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ChunkPos;
 import org.ladysnake.cca.api.v3.chunk.ChunkSyncCallback;
 import org.ladysnake.cca.api.v3.component.ComponentKey;
@@ -33,7 +34,7 @@ import org.ladysnake.cca.internal.base.ComponentUpdatePayload;
 import org.ladysnake.cca.internal.base.MorePacketCodecs;
 
 public final class CardinalComponentsChunk {
-    public static final CustomPayload.Id<ComponentUpdatePayload<ChunkPos>> PACKET_ID = CustomPayload.id("cardinal-components:chunk_sync");
+    public static final CustomPayload.Id<ComponentUpdatePayload<ChunkPos>> PACKET_ID = new CustomPayload.Id<>(Identifier.of("cardinal-components:chunk_sync"));
 
     public static void init() {
         if (FabricLoader.getInstance().isModLoaded("fabric-networking-api-v1")) {

@@ -42,7 +42,7 @@ public abstract class MixinWorldChunk {
     World world;
 
     @Nullable
-    @ModifyVariable(method = "updateTicker", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/block/BlockState;getBlockEntityTicker(Lnet/minecraft/world/World;Lnet/minecraft/block/entity/BlockEntityType;)Lnet/minecraft/block/entity/BlockEntityTicker;"))
+    @ModifyVariable(method = "updateTicker", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/block/BlockState;getBlockEntityTicker(Lnet/minecraft/world/World;Lnet/minecraft/block/entity/BlockEntityType;)Lnet/minecraft/block/entity/BlockEntityTicker;"), index = 3)
     private <T extends BlockEntity> BlockEntityTicker<T> getBlockEntityTicker(BlockEntityTicker<T> base, T blockEntity) {
         return StaticBlockComponentPlugin.INSTANCE.getComponentTicker(this.world, blockEntity, base);
     }
